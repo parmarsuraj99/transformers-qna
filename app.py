@@ -59,7 +59,7 @@ if __name__ == '__main__':
 
     #@title String fields
 
-    app.run()
+    app.run(host='0.0.0.0')
 
 
 
