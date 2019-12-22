@@ -41,7 +41,7 @@ def ans():
 
     j_ans = {'answer': ans}
 
-    print(ans) 
+    #print(ans) 
 
     return jsonify(j_ans)
 
@@ -69,7 +69,7 @@ if __name__ == '__main__':
 
     #@title String fields
 
-    app.run(host='0.0.0.0')
+    app.run(host='localhost')
 
 
 
