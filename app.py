@@ -1,15 +1,25 @@
 print('setting up libraries... ')
-from flask import Flask, request, redirect, url_for, flash, jsonify
+from flask import Flask, request, render_template, redirect, url_for, flash, jsonify
 import time
 
 #from ipywidgets import widgets
 import torch
 from transformers import *
+from flask_cors import CORS
 
 import json
 
 
 app=Flask(__name__)
+CORS(app)
+
+@app.route('/')
+def home():
+
+
+    return render_template('index.html')
+
+
 
 @app.route('/api/', methods=['POST'])
 def ans():
@@ -31,7 +41,7 @@ def ans():
 
     j_ans = {'answer': ans}
 
-    print(data)
+    print(ans) 
 
     return jsonify(j_ans)
 
