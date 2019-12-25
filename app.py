@@ -6,6 +6,7 @@ import time
 import torch
 from transformers import *
 from flask_cors import CORS
+import requests
 
 import json
 
