@@ -15,9 +15,8 @@ CORS(app)
 
 @app.route('/')
 def home():
-
-
-    return render_template('index.html')
+    ip = requests.get('https://checkip.amazonaws.com').text.strip()
+    return render_template('index.html', server_ip=ip)
 
 
 
